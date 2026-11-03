@@ -583,18 +583,6 @@ not (-moz-bool-pref: "zen.view.use-single-toolbar") {
       visibility: hidden !important;
       }
 
-      /*hides media player pelements, except buttons and favicon*/
-      .zen-media-main-vbox > *:not(.zen-media-controls-hbox) {
-      overflow: hidden;
-      max-height: 0;
-      }
-
-      /*removes player buttons except favicon*/
-      .zen-media-controls-hbox > *:not(.zen-media-focus-button) {
-      overflow: hidden;
-      max-height: 0;
-      }
-
       .zen-media-controls-hbox > .zen-media-focus-button {
       display: flex !important;
       }
