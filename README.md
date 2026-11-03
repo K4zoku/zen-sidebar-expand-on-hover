@@ -30,7 +30,7 @@ single/multiple toolbars, both sidebar sides, and custom widths.
 ## Using this fork
 
 The Zen Mods store entry points to the original repository. To use the fixes in
-[this fork](https://github.com/alkali210/zen-sidebar-expand-on-hover), choose one
+[this fork](https://github.com/K4zoku/zen-sidebar-expand-on-hover), choose one
 of the following methods.
 
 ### Option 1: Replace the installed mod's CSS
@@ -45,5 +45,5 @@ of the following methods.
 
 1. Install [Sine](https://github.com/CosmoCreeper/Sine#installation) if you do not already use it.
 2. Disable the original **Sidebar Expand on Hover** mod in Zen Mods to avoid loading both versions.
-3. In Sine's custom repository installation field, enter `alkali210/zen-sidebar-expand-on-hover` and install it.
+3. In Sine's custom repository installation field, enter `K4zoku/zen-sidebar-expand-on-hover` and install it.
 4. Enable the mod in Sine and restart Zen. Updates managed by Sine will come from this fork.
