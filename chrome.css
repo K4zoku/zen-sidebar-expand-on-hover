@@ -595,6 +595,10 @@ not (-moz-bool-pref: "zen.view.use-single-toolbar") {
       max-height: 0;
       }
 
+      .zen-media-controls-hbox > .zen-media-focus-button {
+      display: flex !important;
+      }
+
       /*Hides media player musical notes on collapsed bar*/
       #zen-media-focus-button::after {
       clip-path: inset(0px 0px 100% 0px);
