@@ -260,7 +260,11 @@ not (-moz-bool-pref: "zen.view.use-single-toolbar") {
           z-index: 0 !important;
         }
         &:not([zen-right-side="true"]) ~ #zen-appcontent-wrapper #tabbrowser-tabbox, &:not([zen-right-side="true"]) ~ #zen-appcontent-wrapper #PersonalToolbar:not([collapsed=""]) {
-          clip-path: inset(-2px -2px -2px calc(var(--expanded-tab-bar-width) - var(--collapsed-tab-bar-width) - 5px) round 10px);
+            clip-path: inset(
+              -6px -6px -6px
+              calc(var(--expanded-tab-bar-width) - var(--collapsed-tab-bar-width) - 8px)
+              round calc(var(--zen-border-radius) + 3px)
+            );
         }
         &[zen-right-side="true"] ~ #zen-appcontent-wrapper #tabbrowser-tabbox, &[zen-right-side="true"] ~ #zen-appcontent-wrapper #PersonalToolbar:not([collapsed=""]) {
           clip-path: inset(-2px calc(var(--expanded-tab-bar-width) - var(--collapsed-tab-bar-width) - 5px) -2px -2px round 10px);
