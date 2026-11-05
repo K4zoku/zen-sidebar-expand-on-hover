@@ -108,7 +108,7 @@ not (-moz-bool-pref: "zen.view.use-single-toolbar") {
         #zen-media-controls-toolbar, #zen-appcontent-wrapper,
         vbox.zen-workspace-tabs-section.zen-workspace-pinned-tabs-section,
         #nav-bar, #tabs-newtab-button .toolbarbutton-text, tab:not([zen-essential]):not([pinned])[selected="true"] .tab-background,
-        .tab-audio-button, #zen-media-controls-hbox > *:not(#zen-media-focus-button), #zen-media-main-vbox > *:not(#zen-media-controls-hbox),
+        .tab-audio-button, .zen-media-controls-hbox > *:not(.zen-media-focus-button), .zen-media-main-vbox > *:not(.zen-media-controls-hbox),
         tab:not([zen-essential]) .tab-background, #tabs-newtab-button,
         .pinned-tabs-container-separator, .zen-current-workspace-indicator-name,
         .tab-group-label, #zen-sidebar-top-buttons-customization-target > *,
@@ -123,7 +123,7 @@ not (-moz-bool-pref: "zen.view.use-single-toolbar") {
 
         /*Elements with smooth transitions that are animated*/
         #navigator-toolbox, #PersonalToolbar, #tabbrowser-tabbox, tab:is([zen-essential]),
-        #zen-workspaces-button, #zen-workspaces-button .subviewbutton, #zen-media-focus-button::after,
+        #zen-workspaces-button, #zen-workspaces-button .subviewbutton, .zen-media-focus-button::after,
         .tab-label-container, #zen-sidebar-foot-buttons > *:not(#zen-workspaces-button),
         zen-folder .tab-group-container, #tabbrowser-tabpanels{
           transition: clip-path var(--transition-duration) ease-in-out var(--transition-delay-smooth),
@@ -138,10 +138,10 @@ not (-moz-bool-pref: "zen.view.use-single-toolbar") {
         #zen-sidebar-foot-buttons > *:not(#zen-workspaces-button), #zen-media-controls-toolbar, #zen-appcontent-wrapper,
         vbox.zen-workspace-tabs-section.zen-workspace-pinned-tabs-section,
         #nav-bar, #tabs-newtab-button .toolbarbutton-text, tab:not([zen-essential]):not([pinned])[selected="true"] .tab-background,
-        .tab-audio-button, #zen-media-controls-hbox > *:not(#zen-media-focus-button), #zen-media-main-vbox > *:not(#zen-media-controls-hbox),
+        .tab-audio-button, .zen-media-controls-hbox > *:not(.zen-media-focus-button), .zen-media-main-vbox > *:not(.zen-media-controls-hbox),
         tab:not([zen-essential]) .tab-background, #tabs-newtab-button, .tab-label-container,
         .pinned-tabs-container-separator, .zen-current-workspace-indicator-name, #zen-workspaces-button, .tab-group-label,
-        #zen-sidebar-top-buttons-customization-target > *, #zen-workspaces-button .subviewbutton, #zen-media-focus-button::after,
+        #zen-sidebar-top-buttons-customization-target > *, #zen-workspaces-button .subviewbutton, .zen-media-focus-button::after,
         tab-group .tab-group-container, #urlbar-input, #urlbar::before, #urlbar-zoom-button{
           transition: clip-path 0ms ease-in-out var(--transition-delay-fast),
           transform 0ms ease-in-out var(--transition-delay-fast),
@@ -166,11 +166,11 @@ not (-moz-bool-pref: "zen.view.use-single-toolbar") {
         #zen-sidebar-foot-buttons > *:not(#zen-workspaces-button), #zen-media-controls-toolbar, #zen-appcontent-wrapper,
         vbox.zen-workspace-tabs-section.zen-workspace-pinned-tabs-section,
         #nav-bar, #tabs-newtab-button .toolbarbutton-text, tab:not([zen-essential]):not([pinned])[selected="true"] .tab-background,
-        .tab-audio-button, #zen-media-controls-hbox > *:not(#zen-media-focus-button), #zen-media-main-vbox > *:not(#zen-media-controls-hbox),
+        .tab-audio-button, .zen-media-controls-hbox > *:not(.zen-media-focus-button), .zen-media-main-vbox > *:not(.zen-media-controls-hbox),
         tab:not([zen-essential]) .tab-background, #tabs-newtab-button, .tab-label-container,
         .pinned-tabs-container-separator, .zen-current-workspace-indicator-name,
         .tab-group-label, #zen-sidebar-top-buttons-customization-target > *, tab:is([zen-essential]),
-        #zen-workspaces-button, #zen-workspaces-button .subviewbutton, #zen-media-focus-button::after, tab-group .tab-group-container, zen-folder .tab-group-container, #urlbar-input, #urlbar::before, #urlbar-zoom-button{
+        #zen-workspaces-button, #zen-workspaces-button .subviewbutton, .zen-media-focus-button::after, tab-group .tab-group-container, zen-folder .tab-group-container, #urlbar-input, #urlbar::before, #urlbar-zoom-button{
         transition: clip-path 0ms ease-in-out var(--transition-delay-fast),
         transform 0ms ease-in-out var(--transition-delay-fast),
         opacity 0ms ease-in-out var(--transition-delay-fast),
@@ -271,10 +271,10 @@ not (-moz-bool-pref: "zen.view.use-single-toolbar") {
         tab:not([zen-essential]) .tab-background{
           clip-path: inset(0px 0px 0px 0px round 5px);
         }
-        #zen-media-main-vbox > *:not(#zen-media-controls-hbox) {
+        .zen-media-main-vbox > *:not(.zen-media-controls-hbox) {
         max-height: 100%;
         }
-        #zen-media-controls-hbox > *:not(#zen-media-focus-button) {
+        .zen-media-controls-hbox > *:not(.zen-media-focus-button) {
         max-height: 100%;
         }
         #zen-media-controls-toolbar{
@@ -298,7 +298,7 @@ not (-moz-bool-pref: "zen.view.use-single-toolbar") {
         transform: scale(1);
         opacity: 100% !important;
         }
-        #zen-media-focus-button::after {
+        .zen-media-focus-button::after {
         clip-path: inset(0px 0px 0px 0px);
         }
         tab:is([zen-essential]){
@@ -588,12 +588,12 @@ not (-moz-bool-pref: "zen.view.use-single-toolbar") {
       }
 
       /*Hides media player musical notes on collapsed bar*/
-      #zen-media-focus-button::after {
+      .zen-media-focus-button::after {
       clip-path: inset(0px 0px 100% 0px);
       }
 
       /*Ensures that the mediaplayer has the correct height*/
-      #zen-media-focus-button{
+      .zen-media-focus-button{
       display: flex !important;
       transform: translateX(calc(var(--collapsed-tab-bar-width)/2 - 23px));
       }
@@ -806,6 +806,10 @@ not (-moz-bool-pref: "zen.view.use-single-toolbar") {
         #zen-sidebar-top-buttons-customization-target > *:not(#back-button, #zen-toggle-compact-mode){
         opacity: 0 !important;
         }
+        .zen-media-main-vbox > :not(.zen-media-controls-hbox),
+          .zen-media-controls-hbox > :not(.zen-media-focus-button) {
+            display: none !important;
+          }
       }
 
       /*Made the arrowscrollbox collapse in the right direction, now it fixes tab sizing*/
